@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/Documents_ShriKrishna_blockchain-developer-portfolio11_d194aef2._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__7bb08ea8._.js")
+R.c("server/chunks/ssr/504ff_next_dist_esm_build_templates_app-page_3e693fef.js")
+R.c("server/chunks/ssr/[root-of-the-server]__7bf52122._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__79df35ea._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__25f430a7._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__08bcb99b._.js")
+R.c("server/chunks/ssr/504ff_next_dist_client_components_6f01520b._.js")
+R.c("server/chunks/ssr/504ff_next_dist_client_components_builtin_forbidden_ea75f99d.js")
+R.c("server/chunks/ssr/d82d8_developer-portfolio11__next-internal_server_app__not-found_page_actions_70c13def.js")
+R.m(66453)
+module.exports=R.m(66453).exports
