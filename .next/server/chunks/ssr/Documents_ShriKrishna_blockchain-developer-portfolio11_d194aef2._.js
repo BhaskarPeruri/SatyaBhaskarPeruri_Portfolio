@@ -1,3 +1,0 @@
-module.exports=[49967,a=>{a.n(a.i(3881))},79368,a=>{a.n(a.i(96920))},31464,a=>{a.n(a.i(50097))},24496,a=>{a.n(a.i(12412))},84015,a=>{a.n(a.i(23193))},12412,(a,b,c)=>{"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return f}});let d=a.r(60229),e=a.r(3280);function f(){return(0,d.jsx)(e.HTTPAccessErrorFallback,{status:401,message:"You're not authorized to access this page."})}("function"==typeof c.default||"object"==typeof c.default&&null!==c.default)&&void 0===c.default.__esModule&&(Object.defineProperty(c.default,"__esModule",{value:!0}),Object.assign(c.default,c),b.exports=c.default)}];
-
-//# sourceMappingURL=Documents_ShriKrishna_blockchain-developer-portfolio11_d194aef2._.js.map
