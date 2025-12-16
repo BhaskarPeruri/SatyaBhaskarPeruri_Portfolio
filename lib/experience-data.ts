@@ -28,10 +28,10 @@ export const experiences: Experience[] = [
       "Develop and deploy Solidity smart contracts implementing ERC3643 (RWA tokenization) and ERC4337 (Account Abstraction) standards",
       "Built comprehensive testing suites using Hardhat and Foundry covering unit, integration, fuzz, and invariant tests",
       "Performed gas optimizations and implemented secure design patterns to reduce vulnerabilities and improve scalability",
-      "Integrated smart contracts with dApps using Ethers.js",
+      "Integrate smart contracts with frontend and backend systems, implemented blockchain API interactions, and built embedded wallets with stablecoin-based crypto payment flows for RWA token purchases.",
      
     ],
-    technologies: ["Solidity","ERC3643", "ERC4337", "Hardhat", "Foundry", "React.js","Next.js", "web3.js", "Express.js", "Node.js", "TypeScript", "JavaScript", "Slither", "Mythril", "Echidna"],
+    technologies: ["Solidity","ERC3643","OnchainID", "ERC4337", "Hardhat", "Foundry", "React.js","Next.js", "web3.js", "Express.js", "Node.js", "TypeScript", "JavaScript", "Slither", "Mythril", "Echidna"],
   },
   {
     id: "2",
