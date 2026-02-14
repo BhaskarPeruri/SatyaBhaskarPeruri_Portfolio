@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
   {
     id: "1",
     company: "Ryzer",
-    position: "Senior Blockchain Developer",
+    position: "Blockchain Developer",
     location: "Hyderabad, India",
     website: "https://www.ryzerx.com/",
     // duration: "2 y",

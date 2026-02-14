@@ -10,6 +10,7 @@ const projects = [
       "Stake NFTs to earn ERC20 rewards, with staking management and security protections for users and the protocol",
     image: "nftstaking.png",
     github: "https://github.com/BhaskarPeruri/NFTStaking",
+    demo: null,
     tags: ["Solidity", "DeFi", "Smart Contracts", "Staking", "NFT", "Foundry"],
   },
   {
@@ -18,21 +19,15 @@ const projects = [
       "A decentralized stablecoin system with WETH/WBTC collateral backing DSC tokens pegged to USD.",
     image: "/stablecoindsc.png",
     github: "https://github.com/BhaskarPeruri/StableCoin_DSC",
+    demo: null,
     tags: ["Solidity", "ERC20", "Foundry", "StableCoin", "DSC"],
   },
-  // {
-  //   title: "Cross-Chain Bridge",
-  //   description:
-  //     "Secure bridge protocol enabling asset transfers between Ethereum and Layer 2 networks. Implements Merkle proofs for verification, optimistic rollup pattern, and emergency withdrawal mechanisms.",
-  //   image: "/blockchain-bridge-network.jpg",
-  //   github: "https://github.com/yourusername/cross-chain-bridge",
-  //   tags: ["Layer 2", "Bridge", "Security"],
-  // },
   {
     title: "Dynamic and Static NFTs",
     description:"A collection of ERC721 contracts: BasicNFT for static URIs and MoodNFT for toggleable emotions and dynamic metadata",   
-     image: "/nft.png",
+    image: "/nft.png",
     github: "https://github.com/BhaskarPeruri/Dynamic_and_Static_NFTs",
+    demo: null,
     tags: ["Solidity", "DeFi", "Smart Contracts", "Staking", "NFT", "Foundry"],
   },
   {
@@ -40,6 +35,7 @@ const projects = [
     description:"This is a minimal implementation of an ERC-4337 Account Abstraction smart contract wallet. It provides basic account functionality that allows users to execute transactions through the Account Abstraction infrastructure while maintaining ownership control.",
     image: "/aa.png",
     github: "https://github.com/BhaskarPeruri/AccountAbstraction_Ethereum",
+    demo: null,
     tags: ["Solidity", "DeFi", "Smart Contracts", "Account Abstraction", "Ethereum", "Foundry"],
   },
   {
@@ -47,6 +43,7 @@ const projects = [
     description:"The TrustSig contract is a minimal, secure, and gas-efficient multi-signature wallet that allows a group of trusted owners to collaboratively manage and execute transactions",
     image: "/trustsig.png",
     github: "https://github.com/BhaskarPeruri/TrustSig_Wallet",
+    demo: null,
     tags: ["Wallet", "Multi-Signature", "Security", "Ethereum", "Foundry"],
   },
   {
@@ -54,8 +51,17 @@ const projects = [
     description:"A decentralized raffle system built on the Aptos blockchain that allows users to purchase tickets and randomly selects a winner who receives the entire prize pool.",
     image: "/rafffle.png",
     github: "https://github.com/BhaskarPeruri/aptos-raffle",
+    demo: null,
     tags: ["Move", "Aptos", "Raffle"],
   },
+  {
+    title: "Solana Voting Dapp",
+    description:"A decentralized voting application built on Solana using the Anchor framework. This program supports proposal creation, voting, treasury initialization, token minting, and winner declaration, with clear on-chain state separation and event emission.",
+    image: "/solana_voting_dapp.png",
+    github: "https://github.com/BhaskarPeruri/Voting_Dapp_Solana",
+    demo: "https://voting-dapp-solanaa.vercel.app", // 🔁 Replace with your actual live demo URL
+    tags: ["Solana", "Rust", "Anchor", "Voting", "Dapp"],
+  }
 ]
 
 export function ProjectList() {
@@ -94,12 +100,14 @@ export function ProjectList() {
                   View Code
                 </a>
               </Button>
-              {/* <Button asChild variant="outline" size="sm" className="gap-2 bg-transparent">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
-                </a>
-              </Button> */}
+              {project.demo && (
+                <Button asChild variant="outline" size="sm" className="gap-2 bg-transparent">
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </Button>
+              )}
             </div>
           </CardContent>
         </Card>
