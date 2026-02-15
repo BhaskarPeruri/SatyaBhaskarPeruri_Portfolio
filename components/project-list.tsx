@@ -65,7 +65,7 @@ const projects = [
   {
     title: "EthAssert",
     description:"EthAssert is a native ETH assertion market built on UMA Optimistic Oracle v3, providing a gas-optimized, production-grade interface for posting, disputing, and settling claims with ETH-backed bonds.",
-    image: "images/projects/ethassert.png",
+    image: "images/projects/ethAssert.png",
     github: "https://github.com/BhaskarPeruri/EthAssert",
     demo: null,
     tags: ["UMA", "Optimistic Oracle", "ETH", "Assertion Market"],
