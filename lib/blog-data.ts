@@ -15,10 +15,12 @@ import { EthernautCTFChallengesWriteups } from "./blogs/EthernautCTFChallengesWr
 import { GreyCatTheFlag2025RationalChallengeWriteup } from "./blogs/GreyCatTheFlag2025RationalChallengeWriteup";
 import { GCCCTF2024web3CTFChallengeWriteUp } from "./blogs/GCCCTF2024web3CTFChallengeWriteUp";
 import { NeodymeSolanaCTFWriteup } from "./blogs/NeodymeSolanaCTFWriteup";
+import {EthernautLevel30To40Writeups} from "./blogs/EthernautLevel30To40Writeups";
 // Export all blogs as an array
 export const blogs: Blog[] = [
   EthernautCTFChallengesWriteups,
   GreyCatTheFlag2025RationalChallengeWriteup,
   GCCCTF2024web3CTFChallengeWriteUp,
   NeodymeSolanaCTFWriteup,
+  EthernautLevel30To40Writeups,
 ];

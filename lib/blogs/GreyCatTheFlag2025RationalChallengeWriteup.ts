@@ -13,7 +13,7 @@ export const GreyCatTheFlag2025RationalChallengeWriteup: Blog = {
     "Solidity",
     "Vulnerability Analysis",
   ],
-  image: "/greycattheflag.png",
+  image: "images/blogs//greycattheflag.png",
   content: `## Challenge Overview
 
 **Objective:** Start with 1000 GREY tokens and exploit the vault system to accumulate at least 6000 GREY tokens.

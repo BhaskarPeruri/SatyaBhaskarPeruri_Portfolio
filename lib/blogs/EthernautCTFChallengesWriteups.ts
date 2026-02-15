@@ -2,12 +2,12 @@ import { Blog } from "../blog-data";
 
 export const EthernautCTFChallengesWriteups: Blog = {
   slug: "ethernaut-ctf-challenges-writeups",
-  title: "Ethernaut CTF Challenges Writeups",
+  title: "Ethernaut CTF Challenges Writeups Lvl1-Lvl29",
   excerpt: "CTF challenges for best security practices in smart contracts",
   date: "2023-11-01",
   readTime: "30 min read",
   tags: ["Solidity", "Ethernaut", "Openzeppelin", "CTF", "Writeups"],
-  image: "/ethernaut11.png",
+  image: "images/blogs/ethernaut/ethernaut11.png",
   content: `
 
 ## Setup
@@ -3030,7 +3030,7 @@ Drain the underlying token balance of CryptoVault and Write a detection bot to c
 
 6. When I checked, the \`delegate\` is actually the address of the \`DoubleEntryPoint\` and it is assigned to delegate in LegacyToken contract.
 
-![Delegate Address Screenshot](/images/ethernaut-delegate-address.png)
+![Delegate Address Screenshot](/images/ethernaut/ethernaut-delegate-address.png)
 
 \`\`\`
  foundry command: $ cast 4 0xc89e4361

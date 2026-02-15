@@ -8,7 +8,7 @@ export const GCCCTF2024web3CTFChallengeWriteUp: Blog = {
   date: "2024-04-11",
   readTime: "5 min read",
   tags: ["CTF", "GCC", "web3", "writeup"],
-  image: "/gccCTF.jpeg",
+  image: "images/blogs/gccCTF.jpeg",
   content: `
 # synthatsu_katana_thief
 
