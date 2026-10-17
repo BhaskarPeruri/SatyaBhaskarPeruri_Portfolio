@@ -72,9 +72,11 @@ export function SocialLinks() {
                 <social.icon className="h-6 w-6" />
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-xl mb-1">{social.name}</h3>
-                <p className="text-sm text-primary mb-2 font-mono">{social.username}</p>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{social.description}</p>
+                <h3 className="font-semibold text-lg mb-1">{social.name}</h3>
+                <p className="text-sm text-primary mb-3 font-mono truncate">{social.username}</p>
+                {social.description && (
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{social.description}</p>
+                )}
                 <Button asChild variant="outline" size="sm" className="gap-2 bg-transparent">
                   <a href={social.link} target="_blank" rel="noopener noreferrer">
                     Connect

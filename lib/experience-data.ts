@@ -17,9 +17,9 @@ export const experiences: Experience[] = [
   {
     id: "1",
     company: "Ryzer",
-    position: "Blockchain Developer",
+    position: "Senior Blockchain Developer",
     location: "Hyderabad, India",
-    website: "https://www.ryzerx.com/",
+    website: "https://www.ryzerx.capital/",
     // duration: "2 y",
     startDate: "Aug 2025",
     endDate: "Present",
@@ -31,7 +31,7 @@ export const experiences: Experience[] = [
       "Integrate smart contracts with frontend and backend systems, implemented blockchain API interactions, and built embedded wallets with stablecoin-based crypto payment flows for RWA token purchases.",
      
     ],
-    technologies: ["Solidity","ERC3643","OnchainID", "ERC4337", "Hardhat", "Foundry", "React.js","Next.js", "web3.js", "Express.js", "Node.js", "TypeScript", "JavaScript", "Slither", "Mythril", "Echidna"],
+    technologies: ["Solidity","DAML","ERC3643","OnchainID", "ERC4337", "Hardhat", "Foundry", "React.js","Next.js", "web3.js", "Express.js", "Node.js", "TypeScript", "JavaScript", "Slither", "Mythril", "Echidna"],
   },
   {
     id: "2",
@@ -68,4 +68,19 @@ export const experiences: Experience[] = [
     ],
     technologies: ["Solidity",  "React", "web3.js", "Express.js", "Node.js", "TypeScript", "JavaScript", "MongoDB",]
   },
+  {
+    id: "4",
+    company: "Open Source",
+    position: "Web3 CTF Player",
+    location: "Remote",
+    website: "https://ctftime.org/",
+    startDate: "Novemeber 2023",
+    endDate: "Present",
+    description: "Participated in Web3 CTFs and challenges to improve my skills and knowledge in the field of blockchain security and development.",
+    responsibilities: [
+      "Participating in blockchain Capture-the-Flag (CTF) competitions to strengthen smart contract security, exploit analysis, and protocol auditing skills",
+      "Publishing detailed write-ups of solved challenges to contribute to the Web3 security community."
+    ],
+    technologies: ["Solidity", "Rust", "Move", "Foundry","Hardhat", "Echidna", "Mythril", "Slither", "CTF", "Web3", "Blockchain", "Blockchain Security"]
+  }
 ]

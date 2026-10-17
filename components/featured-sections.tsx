@@ -41,7 +41,7 @@ export function FeaturedSections() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 heading-gradient text-center">
           My Work
         </h2>
 
@@ -50,7 +50,7 @@ export function FeaturedSections() {
             <Link
               key={index}
               href={section.href}
-              className="group p-6 rounded-xl border border-border bg-card hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all"
+              className="group p-6 rounded-xl border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
             >
               <div className="flex items-start gap-4">
                 <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -59,10 +59,10 @@ export function FeaturedSections() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <h3 className="font-semibold text-lg">{section.title}</h3>
-                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-cyan-500 transition-colors" />
+                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
                   <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{section.description}</p>
-                  <p className="text-xs text-cyan-500 font-medium">{section.stats}</p>
+                  <p className="text-xs text-primary font-medium">{section.stats}</p>
                 </div>
               </div>
             </Link>

@@ -19,51 +19,34 @@ export function Hero() {
             />
           </div>
 
-          {/* <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            BlockchainDev
-          </h1> */}
 
-          <p className="text-xl md:text-2xl mb-3 font-medium bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Blockchain Security Researcher & Blockchain Developer
+
+          <h1 className="text-xl md:text-2xl mb-3 font-semibold heading-gradient">
+            Senior Blockchain Developer &amp; Security Researcher
+          </h1>
+
+          <p className="text-base text-muted-foreground max-w-2xl mb-8 leading-relaxed">
+          Building institutional-grade blockchain solutions, from secure smart contracts and RWA tokenization to compliant trading infrastructure and stablecoin payment systems. Experienced in smart contract security research, exploit analysis, and full-stack Web3 development, with a growing focus on Canton Network, DAML, and AI-driven security.
           </p>
 
-          <p className="text-base text-muted-foreground/80 max-w-2xl mb-8 leading-relaxed">
-            Building and securing the decentralized future through smart
-            contract development, security audits, and vulnerability research.
-            Specialized in EVM-based protocols, DeFi security, and end-to-end
-            blockchain engineering.
-          </p>
 
-          {/* <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-muted-foreground">Available for audits</span>
-            </div>
-            <div className="text-muted-foreground">50+ Smart Contracts Audited</div>
-            <div className="text-muted-foreground">15+ Contest Findings</div>
-          </div> */}
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            {/* <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:opacity-90">
-              <Link href="/audits">View Audit Work</Link>
-            </Button> */}
-            {/* <Button asChild size="lg" variant="outline" className="hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
-              <Link href="/audits">View Audit Work</Link>
-            </Button> */}
-            <Button asChild size="lg" variant="outline" className="hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
+            <Button asChild size="lg" variant="outline" className="border-primary/20 hover:border-primary/40 bg-transparent">
               <Link href="/projects">
-              <FolderCode/>See Projects</Link>
+                <FolderCode className="h-4 w-4" />
+                See Projects
+              </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
+            <Button asChild size="lg" variant="outline" className="border-primary/20 hover:border-primary/40 bg-transparent">
               <Link href="/blogs">
-                <FileText className="h-4 w-4 mr-2" />
+                <FileText className="h-4 w-4" />
                 Read Blogs
               </Link>
             </Button>
           </div>
-          
 
-          <div className="flex items-center justify-center gap-3 mt-11">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             <a
               href="https://github.com/BhaskarPeruri"
               target="_blank"

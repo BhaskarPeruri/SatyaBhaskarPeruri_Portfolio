@@ -5,12 +5,13 @@ export function About() {
     {
       icon: Code,
       title: "Development",
-      items: ["Solidity", "Rust", "Move", "JavaScript/TypeScript", "web3.js"],
+      items: ["Solidity", "Rust", "Move", "DAML", "MERN", "web3.js"],
     },
     {
       icon: Shield,
       title: "Security",
       items: [
+        "Hardhat/Foundry",
         "Smart Contract Audits",
         "Web3 CTFs",
         "Vulnerability Research",
@@ -35,9 +36,9 @@ export function About() {
       icon: Terminal,
       title: "Technologies",
       items: [
-        "Ethereum",
-        "Layer 2s",
-        "Hardhat/Foundry",
+        "EVM",
+        "Canton",
+        "Hyperledger",
         "IPFS",
         "Solana",
         "Sui",
@@ -50,43 +51,35 @@ export function About() {
     <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="mx-auto max-w-5xl">
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
             About Me
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              I'm a blockchain developer and security researcher who builds and
-              secures production-grade smart contracts at Ryzer, specializing in
-              advanced standards like <b>ERC3643</b> (RWA tokenization) and{" "}
-              <b>ERC4337</b> (Account Abstraction).
+          <div className="space-y-4 text-base md:text-lg">
+            <p className="text-muted-foreground leading-relaxed">
+            I’m a Blockchain Developer focused on building secure, compliant, 
+            and scalable blockchain infrastructure for real-world asset (RWA) tokenization 
+            and digital financial markets.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              My experience auditing contracts at QuillAudits across Ethereum
-              and EVM-compatible chains taught me that the most secure systems
-              are built by developers who understand both construction and
-              exploitation
+            <p className="text-muted-foreground leading-relaxed">
+            My work spans smart contract engineering, RWA tokenization, DeFi, Web3 security, 
+            and full-stack blockchain development. At RyzerX, I work on production-grade tokenization 
+            infrastructure using standards such as ERC-3643 and ERC-4337, building solutions for real estate, 
+            funds, bonds, compliant OTC trading, investor onboarding, settlement, custody, 
+            and stablecoin-based payment rails.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              I've earned three-digit bounties validating AI-discovered
-              vulnerabilities, identified medium-severity bugs in Code4rena
-              contests, and ranked top 30 in Move language security competitions
-              on HackenProof.
+            <p className="text-muted-foreground leading-relaxed">
+            Before moving into RWA infrastructure, I worked as a Web3 Security Researcher, 
+            auditing smart contracts across EVM ecosystems and using Foundry 
+            and Echidna for fuzzing, invariant testing, exploit analysis, and vulnerability research. 
+            This security background strongly influences how I design and review production smart contracts.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              With expertise spanning Solidity, Move, Rust, and comprehensive
-              fuzz testing using Echidna and Foundry, I bridge the critical gap
-              between development and security that most Web3 projects
-              desperately need.
+            <p className="text-muted-foreground leading-relaxed">
+            I’m particularly interested in the intersection of blockchain, financial infrastructure, tokenization, privacy, interoperability, and AI. 
+            I’m currently working with Canton Network, DAML, and Hyperledger, while exploring institutional blockchain architectures 
+            and emerging AI technologies to understand how distributed systems can support the next generation of financial markets.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              I contribute to open source projects like Arthachain and
-              Flashverse, compete in Web3 CTFs, and share technical writeups to
-              strengthen the broader security community.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              Currently exploring <b> ZKP implementations</b> and scaling
-              security practices for the next generation of decentralized
-              protocols.
+            <p className="text-muted-foreground leading-relaxed">
+            I enjoy building, researching, breaking, and securing blockchain systems — from smart contracts and protocols to complete tokenization platforms.
             </p>
           </div>
         </div>
@@ -97,7 +90,7 @@ export function About() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border border-border bg-card hover:border-cyan-500/50 transition-colors"
+                className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center">
@@ -111,7 +104,7 @@ export function About() {
                       key={i}
                       className="text-sm text-muted-foreground flex items-center gap-2"
                     >
-                      <div className="h-1.5 w-1.5 rounded-full bg-cyan-500" />
+                      <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                       {item}
                     </li>
                   ))}

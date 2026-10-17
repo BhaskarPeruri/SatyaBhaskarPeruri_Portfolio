@@ -93,10 +93,10 @@ export function OpenSourceTable() {
                   variant="secondary"
                   className={
                     contribution.type === "Security Fix"
-                      ? "bg-red-500/10 text-red-500 hover:bg-red-500/20"
+                      ? "bg-red-500/10 text-red-600 dark:text-red-400"
                       : contribution.type === "Feature"
-                        ? "bg-green-500/10 text-green-500 hover:bg-green-500/20"
-                        : ""
+                        ? "bg-green-500/10 text-green-600 dark:text-green-400"
+                        : "bg-primary/10 text-primary"
                   }
                 >
                   {contribution.type}

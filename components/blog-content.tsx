@@ -23,9 +23,9 @@ export function BlogContent({ blog }: BlogContentProps) {
       </Button>
 
       <header className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">{blog.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-balance">{blog.title}</h1>
 
-        <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-4">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4" />
             <span>{blog.date}</span>

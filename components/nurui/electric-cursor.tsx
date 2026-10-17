@@ -19,11 +19,22 @@ const ElectricCursor: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Skip the effect on touch devices and for users who prefer reduced motion
+    if (
+      window.matchMedia("(pointer: coarse)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resize = (): void => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
 
     class Spark implements ISpark {
       x: number;
@@ -57,6 +68,7 @@ const ElectricCursor: React.FC = () => {
       }
     }
 
+    let frameId = 0;
     const animate = (): void => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -68,7 +80,7 @@ const ElectricCursor: React.FC = () => {
         }
       }
 
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
     };
 
     const onMove = (e: MouseEvent): void => {
@@ -78,10 +90,13 @@ const ElectricCursor: React.FC = () => {
     };
 
     window.addEventListener("mousemove", onMove);
+    window.addEventListener("resize", resize);
     animate();
 
     return () => {
+      cancelAnimationFrame(frameId);
       window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("resize", resize);
     };
   }, []);
 

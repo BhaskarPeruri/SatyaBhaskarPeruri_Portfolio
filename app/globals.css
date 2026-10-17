@@ -117,9 +117,19 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Shared brand gradient for headings so light and dark themes stay consistent */
+@utility heading-gradient {
+  @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html {
+    /* Keep anchored sections (e.g. /#about) clear of the fixed header */
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
@@ -127,8 +137,8 @@
 
   /* Crypto-themed custom scrollbar with gradient accent */
   ::-webkit-scrollbar {
-    width: 1px;
-    height: 2px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -182,6 +192,15 @@
 
   .crypto-glow {
     animation: glow 3s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .crypto-glow {
+      animation: none;
+    }
   }
 
   /* Custom prose styles for markdown content */
