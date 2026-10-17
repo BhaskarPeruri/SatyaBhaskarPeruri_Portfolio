@@ -1,9 +1,8 @@
-import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 
-const projects = [
+export const projects = [
   {
     title: "StableCoin_DSC",
     description:
@@ -74,43 +73,87 @@ const projects = [
 
 export function ProjectList() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {projects.map((project) => (
-        <Card
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {projects.map((project, index) => (
+        <article
           key={project.title}
-          className="h-full py-0 gap-0 border-border/50 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 overflow-hidden group"
+          style={{ animationDelay: `${index * 70}ms` }}
+          className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-500 motion-reduce:animate-none motion-reduce:transition-none"
         >
-          <div className="relative h-44 sm:h-48 overflow-hidden bg-muted">
+          {/* Accent line that lights up on hover */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 z-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+
+          {/* Cover image */}
+          <div className="relative aspect-video overflow-hidden bg-muted">
             <Image
               src={project.image || "/placeholder.svg"}
               alt={project.title}
               fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"
+            />
+
+            <span className="absolute left-4 top-4 rounded-md border border-white/15 bg-black/50 px-2 py-0.5 font-mono text-[11px] font-medium tracking-wider text-white/90 backdrop-blur-md">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            {project.demo && (
+              <span className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-black/50 px-2.5 py-0.5 text-[11px] font-medium text-emerald-300 backdrop-blur-md">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 motion-reduce:animate-none" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                </span>
+                Live
+              </span>
+            )}
           </div>
-          <CardContent className="flex flex-1 flex-col p-5 sm:p-6">
-            <h3 className="font-semibold text-xl mb-2">{project.title}</h3>
-            <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-5">
+
+          {/* Body */}
+          <div className="flex flex-1 flex-col p-5 sm:p-6">
+            <div className="mb-2 flex items-start justify-between gap-3">
+              <h3 className="text-xl font-semibold leading-snug tracking-tight transition-colors duration-300 group-hover:text-primary">
+                {project.title}
+              </h3>
+              <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground/60 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
+            </div>
+
+            <p className="mb-5 text-sm leading-relaxed text-muted-foreground md:text-[15px]">
+              {project.description}
+            </p>
+
+            <div className="mb-6 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-medium"
+                  className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            <div className="mt-auto flex flex-wrap gap-3">
-              <Button asChild variant="default" size="sm" className="gap-2">
+
+            {/* Footer actions */}
+            <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-border/60 pt-4">
+              <Button asChild variant="default" size="sm" className="gap-2 shadow-sm shadow-primary/20">
                 <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4" />
                   View Code
                 </a>
               </Button>
               {project.demo && (
-                <Button asChild variant="outline" size="sm" className="gap-2 bg-transparent">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="gap-2 border-primary/20 bg-transparent hover:border-primary/40"
+                >
                   <a href={project.demo} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" />
                     Live Demo
@@ -118,8 +161,8 @@ export function ProjectList() {
                 </Button>
               )}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </article>
       ))}
     </div>
   )
